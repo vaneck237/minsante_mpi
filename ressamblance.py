@@ -7,20 +7,23 @@ def commin(mot1,mot2):
     l1=len(mot1)
     l2=len(mot2)
     if l2>l1:
+        pourcentage=0
         for lettre in mot1:
             if lettre in mot2:
-                pourcentage=pourcent(mot2)            
-                return pourcentage
+                pourcentage=pourcent(mot2)  
+                pourcentage = pourcentage + pourcentage          
+        return pourcentage
 
     else:
+        pourcentage=0
         for lettre in mot2:
             if lettre in mot1:
-                pourcentage=pourcent(mot1)
-                return pourcentage
+                pourcentage=pourcent(mot) + pourcentage
+    return pourcentage
 
 
-     
-mot="mot"
-mots="mot"
+mot="frhy"
+mots="maugtfe"
 
 print(commin(mot,mots))
+
