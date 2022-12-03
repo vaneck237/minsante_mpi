@@ -19,4 +19,5 @@ from django.urls import include, path
 urlpatterns = [
     path('',include('mpi.urls')),
     path('admin/', admin.site.urls),
+    path('annuaire_mpi/', include('annuaire_mpi.urls')),
 ]

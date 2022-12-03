@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="lib/jquery-3.4.1.js"></script>
+    <!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+</head>
+<body>
+    <!-- <button id="MyButton">Click Me!</button>
+    <div id="result"></div> -->
+    <!-- <script>
+    $("#MyButton").click( function(){
+    // $.post("test.php");
+    save();
+    });
+    </script>
+    <script type="text/javascript">
+        function save(){
+       
+             $.ajax({
+       
+                 url : "test.php", // ça c'est la page vers laquelle ta requete ajax seras envoyé
+                 data: {  // ici c'est que j'envoie sur la page
+       
+                     name : $IDCl.val() // donc j'envoie 'name' qui cprrespond à ce qui est dans mon input 'nom'
+                 },
+       
+                 type: 'POST', // je l'envoie en POST
+       
+       
+                 success: function (data) {   // si ça à marché
+       
+                     $('#result').html(data); // je lui dit de rafraichir ma div 'result' avec les 'data' de la page infos.php (voir page infos.php)
+                 }
+             });
+       
+       
+         }
+       
+       
+       
+     </script>  -->
+     
+     <script>
+        //  function DSLscript(){
+        //     var scr = document.createElement('script');
+        //  scr.src='lib/xmlhttp.js';
+        //  document.body.appendChild(src);
+        //  }
+
+        //  function receiveMessage(mess){
+        //      alert(message);
+        //  }
+
+        //  $(function () {
+        //         alert('ok');
+        //     });
+
+       $(function(){
+           $('#overlay').modal('show');
+
+           setTimeout(function() {
+           $('#overlay').modal('hide');
+           }, 5000);
+       }
+       );
+     </script>
+
+<!-- <button id="MyButton" onclick="DSLscript();">Click Me!</button>
+<div id="result"></div>
+h*3 -->
+
+<!-- Insetion des lignes de modal pour la gestion des fenetres d'infos -->
+<!-- Modal -->
+<div class="modal fade" id="overlay">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p>Context here</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin Insetion des lignes de modal pour la gestion des fenetres d'infos -->
+
+</body>
+</html>
+
+

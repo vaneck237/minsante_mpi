@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mpi',
+    'annuaire_mpi',
+    'external_mpi',
+    'matching_mpi',
 ]
 
 MIDDLEWARE = [
