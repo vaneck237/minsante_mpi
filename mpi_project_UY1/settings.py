@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'mpi_project_UY1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mpiDB',
+        'NAME': 'masterpatientindex',
         'USER': 'root',
         'PASSWORD': '',
-        'HOST':'127.0.0.1',
+        'HOST':'localhost',
         'PORT':'3306',
     }
 }
