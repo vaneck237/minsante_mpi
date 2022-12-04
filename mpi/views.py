@@ -20,3 +20,17 @@ def index(request):
 def show(request, name):
     return HttpResponse("This is you %s."  % name)
 
+def register(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        cni = request.POST['cni']
+        sexe = request.POST['sexe']
+        dob = request.POST['dob']
+        tel = request.POST['tel']
+        region = request.POST['region']
+        etranger = request.POST['etranger']
+
+        unique_id = Patient.save_patient(nom=name,cni=cni,sexe=sexe,dob=dob,tel=tel,
+                        region=region,etranger=etranger)
+
+    return render(request, 'registration/index.html')
