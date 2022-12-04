@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : dim. 04 déc. 2022 à 05:41
+-- Généré le : dim. 04 déc. 2022 à 05:56
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -27,7 +27,28 @@ SET time_zone = "+00:00";
 -- Structure de la table `mpi_patient`
 --
 
+DROP TABLE IF EXISTS `mpi_patient`;
+CREATE TABLE IF NOT EXISTS `mpi_patient` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(100) NOT NULL,
+  `date_naiss` varchar(100) NOT NULL,
+  `sexe` varchar(1) NOT NULL,
+  `region_origine` varchar(30) NOT NULL,
+  `commune_naissance` varchar(30) NOT NULL,
+  `adresse` varchar(100) NOT NULL,
+  `telephone` varchar(20) NOT NULL,
+  `statut_marital` varchar(10) NOT NULL,
+  `fonction` varchar(40) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `cni` varchar(20) NOT NULL,
+  `contact_urgence` varchar(100) NOT NULL,
+  `passport` varchar(20) NOT NULL,
+  `unique_id` varchar(100) NOT NULL,
+  `etranger` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=145 DEFAULT CHARSET=utf8mb4;
 
+--
 -- Déchargement des données de la table `mpi_patient`
 --
 
