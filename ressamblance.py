@@ -3,27 +3,42 @@ def pourcent(mot1):
     p=(1/l1)*100
     return p
 
-def commin(mot1,mot2):
+def commin(mot1,lst):
     l1=len(mot1)
-    l2=len(mot2)
+    for el in lst:
+        if el in mot1:
+            l2=len(el)
+            print(el)
+            
     if l2>l1:
         pourcentage=0
+        s=0
         for lettre in mot1:
-            if lettre in mot2:
-                pourcentage=pourcent(mot2)  
-                pourcentage = pourcentage + pourcentage          
+            if lettre in el:
+                s=pourcent(el)  
+                s= s + s   
+                if s>pourcentage:
+
+                    pourcentage=s    
+                else:
+                    pourcentage=pourcentage  
         return pourcentage
 
     else:
         pourcentage=0
-        for lettre in mot2:
+        for lettre in el:
             if lettre in mot1:
-                pourcentage=pourcent(mot) + pourcentage
+                s = pourcent(mot)
+                s= s + s  
+                if s > pourcentage:
+
+                    pourcentage=s    
+                else:
+                    pourcentage=pourcentage  
     return pourcentage
 
 
-mot="frhy"
-mots="maugtfe"
+mot=["bonj","grt","tu"]
+mots="bonjour"
 
-print(commin(mot,mots))
-
+print(commin(mots,mot))

@@ -1,0 +1,19 @@
+{% if content %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gabarit manager</title>
+    </head>
+    <body>
+        <ul>
+            {% for n in content %}
+            <li>This is the name {{ n.nom }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+    </html>
+{% else %}
+
+{% endif %}

@@ -1,8 +1,9 @@
-lts=["jean","pierre","ean","simo"]
+lts=["jean","jean","ean","simo"]
 
 def affiche(chaine,lts):
     for element in lts:
         if chaine in element:
             print(element)
+    return element
 
-affiche("ean",lts)
+affiche("ea",lts)
