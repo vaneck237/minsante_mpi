@@ -609,7 +609,7 @@ function listeRefresh(data) {
 
         },
         error: function () {
-            alert("une erreur s'est prosuite");
+            alert("une erreur s'est produite");
         }
     });
 }

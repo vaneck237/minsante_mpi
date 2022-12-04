@@ -1,6 +1,0 @@
-Credentials for database
-
-user: root
-pas:  root
-
-just import the AnnuaireET sql file into PhpMyadmin

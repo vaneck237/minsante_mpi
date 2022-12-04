@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Table V04</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% load static %}
+<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}" />
+
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+<meta name="robots" content="noindex, follow">
+</head>
+<body>
+
+
+ <div class="login-title" id="img">
+                <div id="container-img1">
+                    <img class="img-login" id="login-girl" src="{% static 'images/logo-minsante.png' %}">
+                </div>
+
+            </div>
+<div class="limiter">
+
+<div class="container-table100">
+<div class="wrap-table100">
+    <div class="acceuil">
+        <span class="login-title">
+             Pending Patients
+        </span>
+
+    </div>
+<div class="table100 ver1 m-b-110">
+<div class="table100-head">
+<table>
+<thead>
+<tr class="row100 head">
+<th class="cell100 column1">Nom Complet</th>
+<th class="cell100 column2">Sexe</th>
+<th class="cell100 column3">CNI</th>
+<th class="cell100 column4">Pourcentage</th>
+<th class="cell100 column5">Decision</th>
+</tr>
+</thead>
+</table>
+</div>
+<div class="table100-body js-pscroll">
+<table>
+<tbody>
+<tr class="row100 body">
+<td class="cell100 column1">Like a butterfly</td>
+<td class="cell100 column2">Boxing</td>
+<td class="cell100 column3">9:00 AM - 11:00 AM</td>
+<td class="cell100 column4">Aaron Chapman</td>
+<td rowspan="2" class="cell100 column5">
+    <div class="form-btn btn-elt">
+                <button id="fill_in" class="" onclick="document.location='index.php';">REGISTER
+                </button>
+            </div>
+    <div class="form-btn btn-elt">
+                <button id="fill_in_last" class="fill_in_red" onclick="document.location='index.php';">MERGE
+                </button>
+            </div>
+</td>
+</tr>
+
+<tr class="row100 body">
+<td class="cell100 column1">Like a butterfly</td>
+<td class="cell100 column2">Boxing</td>
+<td class="cell100 column3">9:00 AM - 11:00 AM</td>
+<td class="cell100 column4">Aaron Chapman</td>
+
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="vendor/select2/select2.min.js"></script>
+
+<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script>
+		$('.js-pscroll').each(function(){
+			var ps = new PerfectScrollbar(this);
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+		});
+
+
+	</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+<script src="js/main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"773f9c0b2d57a5f7","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.11.3","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>

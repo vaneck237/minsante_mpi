@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mpi',
     'annuaire_mpi',
-    'external_mpi',
     'matching_mpi',
+    'external_mpi',
 ]
 
 MIDDLEWARE = [

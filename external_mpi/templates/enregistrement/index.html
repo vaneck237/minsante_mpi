@@ -1,0 +1,152 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+	<script language="javascript" type="text/javascript" src="../../static/script.js"></script>
+	<link rel="stylesheet" href="../../static/style.css" />
+	<link rel="shortcut icon" href="../../static/images/ico_site.jpg" />
+		<title>Resgister Patients</title>
+	</head>
+
+	<body onload="chargement()">
+
+        <div class="login-title" id="img">
+                <div id="container-img1">
+                    {% load static %}
+                    <img class="img-login" id="login-girl" src="{% static 'images/logo-minsante.png' %}">
+                </div>
+
+        </div>
+
+        <div class="wrap">
+
+            <div class="acceuil">
+            <span class="login-title">
+                 <h2>
+                     Login Form
+                 </h2>
+            </span>
+
+            </div>
+        </div>
+        <section>
+
+			<article>
+				<form method="post" action="traitement.php">
+					<p>Veuillez Remplir les Champs</p>
+
+					<fieldset>
+						<p>
+								<legend>Informations Strictes</legend>
+							<br/>
+							<div data-validate = "Valid email is required: ex@abc.xyz">
+							<label for="nom">Nom</label> :
+							<input type="text" name="nom" id="nom" placeholder="Ex : Hares" size=30 maxlength=20 required/> &nbsp
+							</div>
+							<script language="javascript" type="text/javascript">
+
+
+
+							</script>
+						</p>
+						<p>
+							<label for="prenom">Prenom</label> :
+							<input type="text" name="prenom" id="prenom" placeholder="Ex : Leon" size=30 maxlength=30  required/>
+
+							<br />
+                            <br />
+							Sexe :  &nbsp
+
+							<span id="sexm">
+							<label for="m">masculin</label>
+							<input type="radio" name="sexe" id="m" value="masculin"  required/>
+							</span>
+							<span id="sexf">
+							<label for="f">feminin</label>
+							<input type="radio" name="sexe" id="f" value="feminin" required/>
+							</span>
+
+							<br /><br />
+							<label for="naissance">Date de Naissance </label> :
+							<input type="date" name="naissance" id="naissance" required/>
+
+                            <br><br />
+                            <label for="lieu_naiss">Lieu de Naissance</label> :
+							<input type="text" name="lieu_naiss" id="lieu_naiss" placeholder="Ex : Douala" size=30 maxlength=30  required/>
+
+							<br />
+
+
+						</p>
+					</fieldset>
+
+					<fieldset>
+						<p>
+									<legend>Informations Etendues</legend>
+							<br />
+
+                            <label for="mail">E-mail</label> :
+							<input type="email" name="mail" id="mail" placeholder="monadresse@service.com" />
+
+							<br />
+							<label for="mail">N° de Telephone</label> :
+							<input type="tel" name="phone" id="phone" maxlength="9" placeholder="Ex : 677997799" />
+
+                            <br />
+
+                            <label for="mail">N° de CNI </label> :
+							<input type="tel" name="cni" id="cni" maxlength="9" placeholder="Ex : 000125487" />
+
+                            <br />
+
+                            <label for="mail">N° de passport </label> :
+							<input type="tel" name="cni" id="phone" maxlength="9" placeholder="Ex : 000125487" />
+
+                            <br />
+
+							<label for="filiere">Filiere</label> :
+							<select name="filiere" id="filiere" onChange="aff_filiere()"required>
+
+								<option value=""></option>
+								<!-- ajouté Dynamiquement -->
+
+							</select>
+							<br />
+							<label for="option">Option</label> :
+							<select name="option" id="option" required>
+
+								<option value=""></option>
+								<!-- ajouté Dynamiquement -->
+
+							</select>
+							<br/>
+							<label for="niveau">Niveau</label> :
+							<select name="niveau" id="niveau" required>
+								<option value="l0"></option>
+								<option value="l1">LICENCE I</option>
+								<option value="l2">LICENCE II</option>
+								<option value="l2">LICENCE III</option>
+								<option value="l2">MASTER I</option>
+								<option value="l2">MASTER II</option>
+							</select>
+
+							<br />
+							<label for="mat">Matricule</label> :
+								<input type="text" name="mat" id="mat" maxlength="8" pattern=^[0-9]{2}[lLsS][0-9]{5}$ placeholder="Ex : 00s00112" required/>
+
+							<br />
+							<label for="infos" >Infos Supp</label> :
+							<textarea name="infos" id="infos"></textarea>
+
+							<br/>
+							<div id="fin"><input type="submit" name="soumettre" id="soumettre" value="soumettre" /> &nbsp &nbsp <input type="reset" name="reini" id="reini" value="reinitialiser" onclick="effacer_full()" /> &nbsp &nbsp
+							<input type="button" name="annuler" id="annuler" value="annuler" />
+							</div>
+
+						</p>
+					</fieldset>
+
+				</form>
+			</article>
+
+		</section>
+	</body>
