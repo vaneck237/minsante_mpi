@@ -139,6 +139,7 @@ class Patient(models.Model):
             if (cni == i.cni):
                 return i.unique_id
 
+    #fonction d'enregistrement d'un patient
     def save_patient(nom, cni, sexe, dob, tel, region, etranger, list_patient):
         if (cni == ""):
             for i in list_patient:
