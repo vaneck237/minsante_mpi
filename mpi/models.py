@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 class Patient(models.Model):
     nom = models.CharField(max_length=100 , blank=True)
     date_naiss = models.CharField(max_length=100 , blank=True)
@@ -150,8 +148,12 @@ class Patient(models.Model):
         for element in lts:
             if chaine in element:
                 print(element)
-    
-    
+
+class AdminMpi(models.Model):
+    admin_mpi = models.CharField(max_length=50, primary_key=True)
+    admin_pass = models.CharField(max_length=50)
+
+
 class User(models.Model):
-    login = models.CharField(max_length=50, primary_key=True)  
-    password = models.CharField(max_length=50) 
+    login = models.CharField(max_length=50, primary_key=True)
+    password = models.CharField(max_length=50)

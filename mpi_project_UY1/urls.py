@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path('',include('mpi.urls')),
+    path('', include('mpi.urls')),
     path('admin/', admin.site.urls),
+    path('annuaire_mpi/', include('annuaire_mpi.urls')),
+    path('external_mpi/', include('external_mpi.urls')),
+    path('matching_mpi/', include('matching_mpi.urls')),
 ]

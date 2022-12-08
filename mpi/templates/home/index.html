@@ -1,137 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
     <!--===============================================================================================-->
-    <link rel="stylesheet" href="{% static 'libs_mpi/style/style.css' %}">
-{#    {% load static %}#}
-{#    <link rel="stylesheet" href="{% static 'libs_mpi/style/style.css' %}">#}
+    <link rel="shortcut icon" href="{% static 'images/icons/favicon.ico' %}" />
     <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'libs_mpi/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
-   <!--===============================================================================================-->
-    <link rel="shortcut icon" href="{% static 'libs_mpi/images/icons/favicon.ico' %}">
+    <!-- ===============================================================================================-->
+    <!-- <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" /> -->
+    <!--=============================================================================================== -->
     <!--===============================================================================================-->
-{#    <script language="javascript" type="text/javascript" src="../../static/libs_mpi/lib/script.js"></script>#}
+    <link rel="stylesheet" href="{% static 'style/style.css' %}">
     <!--===============================================================================================-->
-    
-    <!--===============================================================================================-->
-    <title>Formulaire d'inscription</title>
 </head>
-<body onload="chargement();">
-    <div class="limiter">
-        <div class="container">
-            <div class="wrap">
-                
-                <form action="traitement.php" method="get" class="login-form validate-form">
-                   <div class="acceuil">
-                        <span class="login-title">
-                            Patient Registration
-                        </span>
-                        
-                    </div>
-                    <div class="img" id="img">
-                        <div id="container-img1">
-                            <img class="img-login" id="login-logo" src="../../static/libs_mpi/images/logo-minsante.png">
-                        </div>
-{#                        <input id="img1" type="file" name="image" onclick="add_image();" />#}
-{#                        <input type="button" value="choisir l'image" id="button-img" onclick="img1.click()">#}
 
-                    </div>
+<body>
+    <div class="wrap">
+        <form name="registerContacts" id="myform" method="POST" action="ajout.php" enctype="multipart/form-data">
 
-                    <div class="wrap-input10-long validate-input10-long">
+            <div class="login-title" id="img">
+                <div id="container-img1">
+                    <img class="img-login" id="login-girl" src="{% static 'images/logo-minsante.png' %}">
+                </div>
 
-                        <input class="input10" type="text" name="nom" id="nom" placeholder="Nom" required  maxlength="50">
-                        <span class="focus-input10-long"></span>
-                        <span class="symbol-input10">
-                            <i class="fa fa-edit" aria-hidden="true"></i>
-                        </span>
-                    </div>
-
-                    <div class="wrap-input10-sexe validate-input10">
-                    
-                        <input class="input10-sex" type="radio" name="sexe" id="masculin" value="Masculin" onclick="change_default_img()" required />
-                        <span class="input10-sexe-name">Masculin</span>
-                        <span class="focus-input10-sexe"></span>
-                        <span class="symbol-input10">
-                            <i class="fa fa-male" aria-hidden="true"></i>
-                        </span>   
-                    </div>
-        
-                    <div class="wrap-input101 validate-input101">
-                    
-                        <input class="input10-sex" id="feminin" type="radio" name="sexe" value="Femme" onclick="change_default_img()" required />
-                        <span class="input10-sexe-name">Feminin</span>
-                        <span class="focus-input10"></span>
-                        <span class="symbol-input10">
-                            <i class="fa fa-female" aria-hidden="true"></i>
-                        </span>   
-                    </div>
-                    
-                
-                    <div class="wrap-input10 validate-input10" data-validate = "Valid name is required :ex@hares">
-                    
-                        <input class="input10" type="date" name="date" id="date" required />
-                        <span class="focus-input10"></span>
-                        <span class="symbol-input10">
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                        </span>   
-                    </div>
-                    
-                    
-                    <div class="wrap-input101 validate-input101" data-validate = "Valid prename is required :ex@leon">
-                    
-                        <input class="input10" type="email" name="mail" 
-                        id="mail" placeholder="Email" required maxlength="30"/>
-                        <span class="focus-input10"></span>
-                        <span class="symbol-input10">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </span>   
-                    </div>
-                    
-                    
-                    <div class="container-login100-form-btn">
-						<input type="submit" value="Submit" class="login100-form-btn">
-						
-					</div>
-					
-					<div class="container-login100-form-btn-reset">
-						<input type="reset" value="Reset" id="reset" class="login100-form-btn t" onclick="remove_login();effacer_full();">
-						
-					</div>
-                   
-                   
-                   
-    <script language="javascript" type="text/javascript">
-            
-    </script>
-                
-                </form>
-                    <div class="container-login100-form-btn">
-						<button id="fill_in"class="login100-form-btn" onclick="remplissage_auto();">AUTO
-						</button>
-					</div>
-           
-{#                   /*div qui contient les liens de navigations */#}
-{#                    <div class="navigation-form">#}
-{#                       #}
-{#                        <button id="form_1_0" class="login100-form-btn form" onclick=""><a href="../TPE PHP v1.0/index.html" >Form V1.0 </a>#}
-{#						</button>#}
-{#                       #}
-{#                        <button id="form_1_1" class="login100-form-btn form" onclick=""><a href="../TPE PHP v1.1/index.html" >Form V1.1 </a>#}
-{#						</button>#}
-{#                       #}
-{#                        <button id="form_1_2" class="login100-form-btn form" onclick=""><a href="../TPE PHP v1.2/index.html" >Form V1.2</a>#}
-{#						</button>#}
-{#                        #}
-{#                    </div>#}
             </div>
-        
-        
-        </div>  
-    
-    
+
+            <div class="acceuil">
+                <span class="login-title">
+                     Login Form
+                </span>
+
+            </div>
+            <div class="wrapper-input">
+                <span class="symbol-input10">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </span>
+                <input class="input-10" type="text" name="nom" id="nom" placeholder="username">
+
+            </div>
+            <div class="wrapper-input wrap-left">
+                <span class="symbol-input10">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                </span>
+                <input class="input-10" type="text" name="prenom" id="prenom" placeholder="password">
+
+            </div>
+
+            <!-- Input charge de conserver l'id a envoyer pour la requete -->
+            <input class="input-10" type="hidden" name="id" id="id_val" placeholder="id">
+
+            <!-- Insetion des lignes de modal pour la gestion des fenetres d'infos -->
+            <!-- <button id="myBtn">Open Modal</button> -->
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Some text in the Modal..</p>
+                </div>
+
+            </div>
+            <!-- Fin Insetion des lignes de modal pour la gestion des fenetres d'infos -->
+
+            <div class="btn-ligne">
+                <div class="form-btn btn-elt">
+                    <!-- <input id="submitForm" name="envoyer" type="submit" value="Ajouter" class=""> -->
+                    <button id="submitForm" name="envoyer" type="submit" class="buttonload">
+                        <i class=""></i> SE CONNECTER
+                        <!-- <i class="fa fa-circle-o-notch fa-spin"></i> Ajouter -->
+                    </button>
+
+                </div>
+            </div>
+        </form>
     </div>
 
+
+    <!--===============================================================================================-->
+    {% load static %}
+    <script type="text/javascript" src="{% static 'lib/jquery-3.4.1.js' %}"></script>
+    <!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <script language="javascript" type="text/javascript" src="{% static 'lib/modal.js' %}"></script>
+    <!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <script language="javascript" type="text/javascript" src=" {% static 'lib/script.js' %}"></script>
+    <!--===============================================================================================-->
 </body>
+
 </html>

@@ -1,0 +1,253 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+	<script language="javascript" type="text/javascript" src="../../static/script.js"></script>
+	<link rel="stylesheet" href="../../static/style.css" />
+	<link rel="shortcut icon" href="../../static/images/ico_site.jpg" />
+		<title>Resgister Patients</title>
+	</head>
+
+	<body onload="chargement()">
+
+        <div class="login-title" id="img">
+                <div id="container-img1">
+                    {% load static %}
+                    <img class="img-login" id="login-girl" src="{% static 'images/logo-minsante.png' %}">
+                </div>
+
+        </div>
+
+        <div class="wrap">
+
+            <div class="acceuil">
+            <span class="login-title">
+                 <h2>
+                     Login Form
+                 </h2>
+            </span>
+
+            </div>
+        </div>
+        <section>
+
+			<article>
+				<form method="post" action="traitement.php">
+					<p>Veuillez Remplir les Champs</p>
+
+					<fieldset>
+						<p>
+								<legend>Informations Strictes</legend>
+							<br/>
+							<div data-validate = "Valid email is required: ex@abc.xyz">
+							<label for="nom">Nom</label> :
+							<input type="text" name="nom" id="nom" placeholder="Ex : Hares" size=30 maxlength=20 required/> &nbsp
+							</div>
+							<script language="javascript" type="text/javascript">
+
+
+
+							</script>
+						</p>
+						<p>
+							<label for="prenom">Prenom</label> :
+							<input type="text" name="prenom" id="prenom" placeholder="Ex : Leon" size=30 maxlength=30  required/>
+
+							<br />
+                            <br />
+							Sexe :  &nbsp
+
+							<span id="sexm">
+							<label for="m">masculin</label>
+							<input type="radio" name="sexe" id="m" value="masculin"  required/>
+							</span>
+							<span id="sexf">
+							<label for="f">feminin</label>
+							<input type="radio" name="sexe" id="f" value="feminin" required/>
+							</span>
+
+							<br /><br />
+							<label for="naissance">Date de Naissance </label> :
+							<input type="date" name="naissance" id="naissance" required/>
+
+                            <br><br />
+                            <label for="lieu_naiss">Lieu de Naissance</label> :
+							<input type="text" name="lieu_naiss" id="lieu_naiss" placeholder="Ex : Douala" size=30 maxlength=30  required/>
+
+							<br />
+
+
+						</p>
+					</fieldset>
+
+					<fieldset>
+						<p>
+									<legend>Informations Etendues</legend>
+							<br />
+
+                            <label for="mail">E-mail</label> :
+							<input type="email" name="mail" id="mail" placeholder="monadresse@service.com" />
+
+							<br />
+							<label for="mail">N° de Telephone</label> :
+							<input type="tel" name="phone" id="phone" maxlength="9" placeholder="Ex : 677997799" />
+
+                            <br />
+
+                            <label for="mail">N° de CNI </label> :
+							<input type="tel" name="cni" id="cni" maxlength="9" placeholder="Ex : 000125487" />
+
+                            <br />
+
+                            <label for="mail">N° de passport </label> :
+							<input type="tel" name="pass" id="phone" maxlength="29" placeholder="Ex : CMR470125487" />
+
+                            <br />
+
+							<label for="nationalite">Nationalité</label> :
+							<select name="nationalite" id="nationalite" onChange="aff_filiere()" required maxlength="30">
+
+                                <option value=""></option>
+								<option value="0">Cameroun</option>
+                                <option value="1">Autre</option>
+								<!-- ajouté Dynamiquement -->
+
+							</select>
+							<br /><br />
+							<label for="commune">Commune</label> :
+							<select name="commune" id="commune" required>
+
+								<option value=""></option>
+                                <option value="af">Afanloum</option>
+                                <option value="el">Elig-Mfomo</option>
+								<!-- ajouté Dynamiquement -->
+
+							</select>
+							<br/><br />
+							<label for="religion">Religion</label> :
+							<select name="religion" id="religion" required>
+								<option value="l0"></option>
+								<option value="chr">Chretiens</option>
+								<option value="au-chr">Autres Chretiens</option>
+								<option value="musul">Musulmans</option>
+								<option value="au">Autre</option>
+							</select>
+                            <br />
+                            <br />
+							<label for="pseudo">pseudo</label> :
+							<input type="pseudo" name="pseudo" id="pseudo" maxlength="20" placeholder="Ex : TheJoker237" />
+
+                            <br />
+                            <br />
+
+                            <label for="mail">adresse </label> :
+							<input type="text" name="adresse" id="cni" maxlength="30" placeholder="Ex : Cradat" />
+
+                            <br />
+
+                            <br />
+							<label for="father">Nom du père</label> :
+							<input type="text" name="pere" id="pere" maxlength="30" placeholder="Ex : Papa123" />
+
+                            <br />
+                            <br />
+
+                            <label for="mail">Nom de la mère </label> :
+							<input type="text" name="mere" id="mere" maxlength="30" placeholder="Ex : Mama123" />
+
+                            <br />
+
+						</p>
+					</fieldset>
+
+                    <fieldset>
+						<p>
+                            <br /><br />
+							<label for="statut-marital">Status Marital</label> :
+							<select name="statut-marital" id="statut-marital" required>
+								<option value=""></option>
+                                <option value="0">Marié</option>
+                                <option value="1">Célibataire</option>
+                                <option value="2">Divorcé</option>
+							</select>
+						</p>
+
+                        <p>
+                            <br /><br />
+							<label for="statut-professionnel">Status Professionnel</label> :
+							<select name="statut-professionnel" id="statut-professionnel" required>
+								<option value=""></option>
+                                <option value="0">Sans-Emploi</option>
+                                <option value="1">Célibataire</option>
+                                <option value="2">Divorcé</option>
+							</select>
+						</p>
+                        <br>
+
+						<p>
+							<label for="tuteur">Tuteur</label> :
+							<input type="text" name="tuteur" id="tuteur" placeholder="Ex : SuperPapa" size=30 maxlength=30  required/>
+
+							<br />
+                            <br />
+							<label for="mail">Contact en cas d'Urgence</label> :
+							<input type="tel" name="urgence" id="urgence" maxlength="30" placeholder="Ex : +3369456456498" />
+                            <br />
+
+                            <br>
+                            <label for="sanguin">Groupe Sqnguin</label>
+                            : A-
+							<input type="radio" name="urgence" id="urgence" value="a-" checked/>
+
+                            <label for="sanguin"></label> : A+
+							<input type="radio" name="urgence" id="urgence" value="a+"/>
+
+                            <label for="sanguin"></label> : B-
+							<input type="radio" name="urgence" id="urgence" value="b-"/>
+
+                            <label for="sanguin">A</label> : B+
+							<input type="radio" name="urgence" id="urgence" value="b+"/>
+
+                            <label for="sanguin">A</label> : O-
+							<input type="radio" name="urgence" id="urgence" value="b+"/>
+
+                            <label for="sanguin">A</label> : 0+
+							<input type="radio" name="urgence" id="urgence" value="b+"/>
+
+                            <label for="sanguin">A</label> : AB-
+							<input type="radio" name="urgence" id="urgence" value="b+"/>
+
+                            <label for="sanguin">A</label> : AB+
+							<input type="radio" name="urgence" id="urgence" value="b+"/>
+                            <br />
+
+							Sexe :  &nbsp
+
+							<span id="sexm">
+							<label for="m">masculin</label>
+							<input type="radio" name="sexe" id="m" value="masculin"  required/>
+							</span>
+							<span id="sexf">
+							<label for="f">feminin</label>
+							<input type="radio" name="sexe" id="f" value="feminin" required/>
+							</span>
+
+							<br /><br />
+							<label for="pathologies">Lister des Patologies </label> :
+							<input type="textarea" name="path" id="naissance" required/>
+
+                            <br><br />
+                            <label for="lieu_naiss">Lister les Allergies</label> :
+							<input type="taxt-ara" name="all" id="lieu_naiss" size=30 maxlength=30  required/>
+
+
+
+						</p>
+					</fieldset>
+                    <div id="fin"><input type="submit" name="soumettre" id="soumettre" value="soumettre" /> &nbsp &nbsp <input type="reset" name="reini" id="reini" value="reinitialiser" onclick="effacer_full()" /> &nbsp &nbsp
+							<input type="button" name="annuler" id="annuler" value="annuler" />
+                    </div>
+				</form>
+			</article>
+
+		</section>
+	</body>
